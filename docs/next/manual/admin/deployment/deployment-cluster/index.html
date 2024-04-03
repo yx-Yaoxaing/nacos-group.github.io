@@ -51,7 +51,7 @@ starlight-tabs:where(.astro-esqgolmp){display:block}.tablist-wrapper:where(.astr
 <p><code dir="auto">&#x3C;http://SLB:port/openAPI></code>  挂载SLB模式(内网SLB，不可暴露到公网，以免带来安全风险)，直连SLB即可，下面挂server真实ip，可读性不好。</p>
 <p><code dir="auto">&#x3C;http://nacos.com:port/openAPI></code>  域名 + SLB模式(内网SLB，不可暴露到公网，以免带来安全风险)，可读性好，而且换ip方便，推荐模式</p>
 <p><img src="/img/doc/manual/admin/deployment/deploy-dns-vip-mode.svg" alt="deployDnsVipMode.jpg" referrerpolicy="no-referrer"></p>
-<p>在使用VIP时，需要开放Nacos服务的主端口(默认8848)以及gRPC端口(默认9848)、同时如果对Nacos的主端口有所修改的话，需要对vip中的端口映射作出配置，具体端口的映射方式参考<a href="../deployment-overview#1-Nacos%E9%83%A8%E7%BD%B2%E6%9E%B6%E6%9E%84" referrerpolicy="unsafe-url">部署手册概览-Nacos部署架构</a></p>
+<p>在使用VIP时，需要开放Nacos服务的主端口(默认8848)以及gRPC端口(默认9848)、同时如果对Nacos的主端口有所修改的话，需要对vip中的端口映射作出配置，具体端口的映射方式参考<a href="../deployment-overview/#1-Nacos%E9%83%A8%E7%BD%B2%E6%9E%B6%E6%9E%84" referrerpolicy="unsafe-url">部署手册概览-Nacos部署架构</a></p>
 <h2 id="1-发行版部署">1. 发行版部署</h2>
 <h3 id="11-使用mysql数据库推荐">1.1. 使用MySQL数据库（推荐）</h3>
 <h4 id="111-环境准备">1.1.1. 环境准备</h4>
@@ -72,7 +72,7 @@ starlight-tabs:where(.astro-esqgolmp){display:block}.tablist-wrapper:where(.astr
 <p>修改<code dir="auto">conf</code>目录下的<code dir="auto">application.properties</code>文件。</p>
 <p>设置其中</p>
 <div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre tabindex="0"><code><div class="ec-line"><span style="--0:#F97583">nacos.core.auth.enabled</span><span style="--0:#E1E4E8">=true</span></div><div class="ec-line"><span style="--0:#F97583">nacos.core.auth.system.type</span><span style="--0:#E1E4E8">=nacos</span></div><div class="ec-line"><span style="--0:#F97583">nacos.core.auth.plugin.nacos.token.secret.key</span><span style="--0:#E1E4E8">=${自定义，保证所有节点一致}</span></div><div class="ec-line"><span style="--0:#F97583">nacos.core.auth.server.identity.key</span><span style="--0:#E1E4E8">=${自定义，保证所有节点一致}</span></div><div class="ec-line"><span style="--0:#F97583">nacos.core.auth.server.identity.value</span><span style="--0:#E1E4E8">=${自定义，保证所有节点一致}</span></div></code></pre><div class="copy"><button title="Copy to clipboard" data-copied="Copied!" data-code="nacos.core.auth.enabled=truenacos.core.auth.system.type=nacosnacos.core.auth.plugin.nacos.token.secret.key=${自定义，保证所有节点一致}nacos.core.auth.server.identity.key=${自定义，保证所有节点一致}nacos.core.auth.server.identity.value=${自定义，保证所有节点一致}"><div></div></button></div></figure></div>
-<p>上述内容详情可查看<a href="../../../plugin/auth-plugin/" referrerpolicy="unsafe-url">权限认证</a>.</p>
+<p>上述内容详情可查看<a href="../../../../plugin/auth-plugin/" referrerpolicy="unsafe-url">权限认证</a>.</p>
 <blockquote>
 <p>注意，文档中的默认值<code dir="auto">SecretKey012345678901234567890123456789012345678901234567890123456789</code>和<code dir="auto">VGhpc0lzTXlDdXN0b21TZWNyZXRLZXkwMTIzNDU2Nzg=</code>为公开默认值，可用于临时测试，实际使用时请<strong>务必</strong>更换为自定义的其他有效值。</p>
 </blockquote>
