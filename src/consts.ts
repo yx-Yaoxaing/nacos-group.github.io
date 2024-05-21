@@ -57,7 +57,10 @@ export const i18nMap = {
         'activity-detail': 'blog.activity.detail.event',
         'all': 'blog.activity.all.event'
 
-    }
+    },
+    "wuyi": {
+      'expertConsultation': 'wuyi.meet-professor.title',
+    },
 }
 
 export const BLOG_CATEGORY = [
@@ -81,6 +84,14 @@ export const BLOG_CATEGORY = [
         type: 'case',
         title: '最佳实践',
         href: '/blog/case'
+    },
+];
+
+export const WUYI_CATEGORY = [
+    {
+        type: 'expertConsultation',
+        title: '全部文章',
+        href: '/wuyi/'
     },
 ];
 
